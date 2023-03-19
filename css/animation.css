@@ -1,0 +1,139 @@
+@keyframes rect-in-out {
+    0% {
+        fill-opacity: 0;
+    }
+    20%, 25% {
+        fill-opacity: 1;
+    }
+    45%, 100% {
+        fill-opacity: 0;
+    }
+}
+
+@keyframes path-reveal {
+    0% {
+        stroke-dashoffset: -50;
+        stroke-opacity: 1;
+    }
+    15%, 100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+.background-animation .background-logo {
+    --delay-increment: 0ms;
+}
+
+.background-animation #background-animation-2 {
+    --delay-increment: 2300ms;
+}
+
+.background-animation #background-animation-3 {
+    --delay-increment: 4000ms;
+}
+
+.background-animation #background-animation-4 {
+    --delay-increment: 7000ms;
+}
+
+.background-animation #background-animation-5 {
+    --delay-increment: 3000ms;
+}
+
+.background-animation #background-animation-6 {
+    --delay-increment: 1500ms;
+}
+
+.background-animation #background-animation-7 {
+    --delay-increment: 6000ms;
+}
+
+.background-animation #background-animation-8 {
+    --delay-increment: 1000ms;
+}
+
+.background-animation #background-animation-9 {
+    --delay-increment: 4000ms;
+}
+
+.background-animation #background-animation-10 {
+    --delay-increment: 5700ms;
+}
+
+.background-animation #background-animation-11 {
+    --delay-increment: 1500ms;
+}
+
+.background-animation #background-animation-12 {
+    --delay-increment: 5700ms;
+}
+
+.background-animation #background-animation-13 {
+    --delay-increment: 4700ms;
+}
+
+.background-animation #background-animation-14 {
+    --delay-increment: 7000ms;
+}
+
+.background-animation #background-animation-15 {
+    --delay-increment: 700ms;
+}
+
+.background-animation .background-logo rect {
+    animation: rect-in-out infinite ease;
+    animation-duration: max(
+                            calc( 3000ms + var(--delay-increment) ),
+                            7500ms
+                        );
+ }
+
+.background-animation .background-logo path {
+    animation: path-reveal 7500ms infinite ease-out;
+ }
+
+.background-animation .background-logo rect.sqr-2 {
+    animation-delay: calc(250ms + var(--delay-increment));
+}
+
+.background-animation .background-logo rect.sqr-3 {
+    animation-delay: calc(500ms + var(--delay-increment));
+}
+
+.background-animation .background-logo rect.sqr-4 {
+    animation-delay: calc(750ms + var(--delay-increment));
+}
+
+.background-animation .background-logo rect.sqr-5 {
+    animation-delay: calc(1000ms + var(--delay-increment));
+}
+
+.background-animation .background-logo path.arc-1 {
+    animation-delay: calc(1250ms + var(--delay-increment));
+}
+
+.background-animation .background-logo path.arc-2 {
+    animation-delay: calc(1500ms + var(--delay-increment));
+}
+
+.background-animation .background-logo.clockwise path {
+    animation-direction: reverse;
+}
+
+.background-animation #background-animation-4 path.arc-1 {
+    animation-timing-function: ease-out;
+}
+
+.background-animation #background-animation-4 path.arc-2 {
+    animation-timing-function: ease-in;
+    animation-delay: calc(2000ms + var(--delay-increment));
+}
+
+.background-animation #background-animation-15 path.arc-1 {
+    animation-timing-function: ease-out;
+    animation-delay: calc(2200ms + var(--delay-increment));
+}
+
+.background-animation #background-animation-15 path.arc-2 {
+    animation-timing-function: ease-in;
+}
