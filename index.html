@@ -4,205 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Filipe Duarte</title>
 </head>
 <body>
     <header id="main-header">
-        <div class="container">
-            <div class="logo">
-                <a href="#">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 417 463" width="36" height="40" xml:space="preserve" aria-labelledby="logo-title logo-desc" role="img">
-                        <title id="logo-title">Retornar ao topo</title>
-                        <desc id="logo-desc">Logotipo: uma letra D composta por quadrados e um semicírculo</desc>
-                        <path d="M.4 92.6H93v92.6H.4z"/>
-                        <path d="M185.5 0v92.6c76.7 0 138.8 62.2 138.8 138.8s-62.2 138.8-138.8 138.8H93v-92.6H.4v185.1h185.1c127.8 0 231.4-103.6 231.4-231.4S313.3 0 185.5 0z"/>
-                        <path d="M93 185.2h92.6v92.6H93z"/>
-                    </svg>
-                </a>
-                <h1>
-                    <a href="#" title="Retornar ao topo">
-                        Fil<span>ipe</span><br>
-                        Duarte
-                    </a>
-                </h1>
-            </div>
-            <nav>
-                <button id="menu-toggle"></button>
-                <ul class="menu-items">
-                    <li>
-                        <a href="#about-me">About me</a>
-                    </li>
-                    <li>
-                        <a href="#my-work">My work</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+        <div id="header-logo">
+            <a href="#">
+                <img src="img/logo.webp" alt="Filipe Duarte Logo">
+                <h1>Filipe Duarte</h1>
+            </a>
+        </div>
+        <div id="main-menu-container">
+            <nav id="main-menu">
+                <button class="menu-toggle" aria-controls="menu-list">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="menu-list">
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#my-work">My work</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <section id="hero">
-            <div class="background-animation">
-                <svg id="background-animation-1" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <path class="arc-1" d=" M 32 8 A 32 32 0 0 1 64 40" />
-                </svg>
-                <svg id="background-animation-2" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-4" x="0" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-3" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <rect class="sqr-5" x="16" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-4" class="background-logo clockwise" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-4" x="0" y="64" width="16" height="16"></rect>
-                    <path class="arc-1" d=" M 32 8 A 32 32 0 0 1 64 40" />
-                    <path class="arc-2" d=" M 64 40 A 32 32 0 0 1 32 72" />
-                </svg>
-                <svg id="background-animation-5" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-5" x="16" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-6" class="background-logo clockwise" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <rect class="sqr-4" x="0" y="64" width="16" height="16"></rect>
-                    <path class="arc-1" d=" M 32 8 A 32 32 0 0 1 64 40" />
-                </svg>
-                <svg id="background-animation-7" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <path class="arc-2" d=" M 64 40 A 32 32 0 0 1 32 72" />
-                </svg>
-                <svg id="background-animation-8" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <rect class="sqr-5" x="16" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-9" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <rect class="sqr-4" x="0" y="64" width="16" height="16"></rect>
-                    <rect class="sqr-5" x="16" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-10" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <rect class="sqr-4" x="0" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-11" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <path class="arc-2" d=" M 64 40 A 32 32 0 0 1 32 72" />
-                </svg>
-                <svg id="background-animation-12" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-3" x="0" y="48" width="16" height="16"></rect>
-                    <path class="arc-1" d=" M 32 8 A 32 32 0 0 1 64 40" />
-                </svg>
-                <svg id="background-animation-13" class="background-logo clockwise" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-4" x="0" y="64" width="16" height="16"></rect>
-                    <path class="arc-2" d=" M 64 40 A 32 32 0 0 1 32 72" />
-                </svg>
-                <svg id="background-animation-14" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <rect class="sqr-1" x="0" y="16" width="16" height="16"></rect>
-                    <rect class="sqr-2" x="16" y="32" width="16" height="16"></rect>
-                    <rect class="sqr-5" x="16" y="64" width="16" height="16"></rect>
-                </svg>
-                <svg id="background-animation-15" class="background-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" height="80" viewBox="0 0 80 80">
-                    <path class="arc-1" d=" M 32 8 A 32 32 0 0 1 64 40" />
-                    <path class="arc-2" d=" M 64 40 A 32 32 0 0 1 32 72" />
-                </svg>
+            <img src="img/logo.webp" alt="Filipe Duarte Logo">
+            <div>
+                <h2>Hello world!</h2>
+                <p>I'm Filipe Duarte, a web designer & frontend developer from Brazil.</p>
+                <p>But you can call me Fil.</p>
+                <a href="#contact" class="button-primary">Get in touch</a>
             </div>
-            <div class="code-editor">
-                <div class="code-editor__window">
-                    <div class="top-bar">
-                        <div class="file-tab">
-                            <i class="fa-brands fa-js"></i>script.js
-                        </div>
-                        <div class="window-actions">
-                            <div class="bt-min">
-                                <button title="Minimize" onclick="minimizeEditor()"></button>
-                            </div>
-                            <div class="bt-max">
-                                <button title="Maximize" onclick="maximizeEditor()"></button>
-                            </div>
-                            <div class="bt-restore">
-                                <button title="Restore" onclick="restoreEditor()"></button>
-                            </div>
-                            <div class="bt-close">
-                                <button title="Close" onclick="closeEditor()"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <code class="source-code">
-                        <pre contenteditable="false">
-if ( <span class="code-var">webDesigner</span> && <span class="code-var">frontendDeveloper</span> ) {
-  return <span class="code-string">`
-    Hello World!
-    I’m Filipe Duarte, a Web Designer
-    and Frontend Developer from Brazil.
-  `</span>;
-}</pre>
-                    </code>
-                </div>
-            </div>
-            <div class="cta">
-                <a href="#contact" class="button">Get in touch</a>
-            </div>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/filipe-gomes-duarte/"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/filgduarte"><i class="fa-brands fa-github"></i></a>
-                <a href="https://bolha.us/@filipeduarte"><i class="fa-brands fa-mastodon"></i></a>
-            </div>
-
         </section>
-        
-        <div class="header-background"></div>
 
         <section id="about-me">
-            <div class="container">
-                <div class="about-me__photo">
-                    <img src="img/logo_gradient.webp" alt="" />
-                    <img class="profile-pic" src="img/filipe-duarte.webp" alt="Filipe Duarte" />
-                </div>
-                <div class="about-me__text">
-                    <h2>About me</h2>
-                    <p>From an early age I was interested in making pages on the internet (remember Microsoft FrontPage?) and in high school I decided to take a <strong>Technical Course in Information Technology.</strong></p>
-                    <p>When it was time to go to college, I ended up deciding to study <strong>Industrial Design</strong> and started working in 2006 as a graphic designer. Due to my development background, I also was always responsible for making websites and web apps in the companies I worked for.</p>
-                    <p>Thanks to that I have accumulated more than 15 years of experience in <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress and MySQL.</strong> Currently I’m studying <strong>ReactJS</strong> and <strong>Laravel.</strong></p>
-                    <p>If yout want to know more about me, click the button below and download my CV.</p>
-                    <a href="#" class="button">Download CV</a>
-                </div>
+            <div class="about-me__content">
+                <h2>About me</h2>
+                <p>From an early age I was interested in making pages on the internet (remember Microsoft FrontPage?) and in high school I decided to take a <strong>Technical Course in Information Technology</strong>.</p>
+                <p>When it was time to go to college, I ended up deciding to study <strong>Industrial Design</strong> and started working in 2006 as a graphic designer. Due to my development background, I also was always responsible for making websites and web apps in the companies I worke</p>
+                <p>Thanks to that I have accumulated more than 15 years of experience in <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress and MySQL</strong>. Currently I’m pursuing a <strong>Systems Analysis and Development Degree</strong> and studying <strong>ReactJS</strong> and <strong>Laravel</strong> on my fre</p>
+                <p>If yout want to know more about me, click the button below and download my CV.</p>
+                <a href="#" class="button-secondary">Download CV</a>
             </div>
         </section>
 
         <section id="my-work">
-            <div class="container">
-                <h2>My work</h2>
+            <h2>My work</h2>
+            <h3>These are some projects I've worked on.</h3>
+            <div class="works">
+                <div class="work-item">
+                    <img src="img/logo.webp" alt=""class="work-item__image">
+                    <div class="work-item__description">
+                        <h4>Gráfica Impacto Angra</h4>
+                        <h5>Chrome extension to notify customers of a print shop via Whatsapp.</h5>
+                        <p><strong>The challenge:</strong> integrate an online store without an open API with a Whatsapp messaging API. The goal was to notify customers when an admin user changes the status of their orders.</p>
+                        <p><strong>The solution:</strong> make a Chrome extension to recognize actions in the admin panel and make the necessary API calls.</p>
+                        <p><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><a href="#">Link externo</a></p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="img/logo.webp" alt=""class="work-item__image">
+                    <div class="work-item__description"></div>
+                </div>
+                <div class="work-item">
+                    <img src="" alt=""class="work-item__image">
+                    <div class="work-item__description"></div>
+                </div>
             </div>
         </section>
 
         <section id="contact">
-            <div class="container">
-                <h2>Contact</h2>
+            <h2>Contact</h2>
+            <div class="contact-social">
+                <h3>Want to know more about my work or talk to me? You can find me on the platforms below or contact me using the contact form.</h3>
+                <div class="social-links">
+                    <ul>
+                        <li><img src="" alt="LinkedIn">LinkedIn: /filipe-gomes-duarte</li>
+                        <li><img src="" alt="GitHub">GitHub: /filgduarte</li>
+                        <li><img src="" alt="Mastodon">Mastodon: /filipeduarte@bolha.us</li>
+                    </ul>
+                </div>
             </div>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+                <label for="Message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit" class="button-primary">Get in touch</button>
+            </form>
         </section>
-
     </main>
 
-    <script src="https://kit.fontawesome.com/32f5c2656c.js" crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
