@@ -15,7 +15,6 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 56px;
 }
-
 html,
 input,
 textarea,
@@ -26,11 +25,11 @@ button {
 body {
     color: var(--color-text);
     background-color: var(--color-background);
-    padding-top: 56px;
 }
 
 section {
-    padding: 32px;
+    padding: 32px 32px 32px;
+    transform-style: preserve-3d;
 }
 
 h2 {
@@ -89,15 +88,21 @@ textarea {
     border: 1px solid var(--color-primary);
 }
 
+textarea {
+    height: 10rem;
+}
+
 button {
     display: block;
     width: 100%;
     padding: 12px;
     border: none;
+    cursor: pointer;
 }
 
 .button-primary,
 .button-secondary {
+    position: relative;
     display: block;
     padding: 12px;
     font-size: 1.25rem;
@@ -106,12 +111,28 @@ button {
     text-decoration: none;
     color: var(--color-secondary);
     background-color: var(--color-primary);
+    transition: background-color 300ms ease,
+                transform 300ms ease;
 }
 
 .button-secondary {
     color: var(--color-primary);
-    border: 1px solid var(--color-primary);
     background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.button-primary:hover {
+    text-decoration: none;
+    color: var(--color-secondary);
+    background-color: var(--color-text);
+    animation: bounce 500ms cubic-bezier(.46,.25,.15,1.28) forwards;
+}
+
+.button-secondary:hover {
+    text-decoration: none;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    animation: bounce 500ms cubic-bezier(.46,.25,.15,1.28) forwards;
 }
 
 #main-header {
@@ -122,6 +143,8 @@ button {
     width: 100%;
     padding: 8px 16px;
     height: 56px;
+    z-index: 99;
+    transition: background-color 300ms;
 }
 
 #main-header.scrolled {
@@ -133,6 +156,10 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 128px;
+}
+
+#header-logo a:hover {
+    text-decoration: none;
 }
 
 #header-logo a img {
@@ -157,13 +184,28 @@ button {
 
 #main-header .menu-toggle span {
     display: block;
+    margin: 0 auto;
     width: 1.5rem;
     height: 0.125rem;
     background-color: var(--color-primary);
+    transform-origin: center;
+    transition: transform 300ms ease;
 }
 
 #main-header .menu-toggle span + span {
     margin-top: 6px;
+}
+
+#main-header nav.active .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+#main-header nav.active .menu-toggle span:nth-child(2) {
+    transform: scaleX(0);
+}
+
+#main-header nav.active .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5px);
 }
 
 #main-header nav ul {
@@ -185,22 +227,35 @@ button {
     padding: 16px 40px;
 }
 
+.section-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.hero-about-container {
+    background-image: radial-gradient(42.14% 43.54% at 92.14% 9.63%, #3A0CA3 0%, #100C43 100%);
+    background-repeat: no-repeat;
+}
+
+.hero-about-container img {
+    display: block;
+    position: relative;
+    margin: 0 auto 32px;
+    max-height: 72.5vw;
+}
+
 #hero {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 88px;
 }
 
 #hero h2 {
     margin: 0;
     font-size: 1rem;
     color: var(--color-text);
-}
-
-#hero img {
-    max-height: 72.5vw;
-    margin-bottom: 32px;
 }
 
 #hero :is(h2, p) {
@@ -252,4 +307,51 @@ button {
 
 .work-item__description span + span {
     margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        min-height: 100vh;
+    }
+
+    .hero-about-container .main-logo {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #hero {
+        container-type: normal;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #hero .hero-text {
+        width: 62%;
+    }
+
+    #hero h2,
+    #hero p {
+        font-size: 3cqw;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        scale: 1;
+        transform: perspective(1000px) rotateX(0);
+    }
+    25% {
+        transform: perspective(1000px) rotateX(25deg);
+    }
+    50% {
+        scale: 1.1;
+    }
+    75% {
+        transform: perspective(1000px) rotateX(-25deg);
+    }
+    100% {
+        scale: 1.05;
+        transform: perspective(1000px) rotateX(0);
+    }
 }

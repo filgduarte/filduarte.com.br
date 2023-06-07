@@ -7,11 +7,11 @@ document.querySelector('.menu-toggle').addEventListener('click', function(event)
 
 window.addEventListener('scroll', function() {
     const header = this.document.querySelector('#main-header');
-    if (window.scrollY > 10)
+    if (window.scrollY > 100)
     {
         header.classList.add('scrolled');
     }
     else {
-        header.classList.add('scrolled');
+        header.classList.remove('scrolled');
     }
 })
