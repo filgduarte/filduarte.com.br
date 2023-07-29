@@ -42,15 +42,10 @@
         <div class="ripples-container">
             <div class="ripples">
                 <div class="ripple"></div>
-                <div class="ripple" style="--animation-delay: -2s;"></div>
-                <div class="ripple" style="--animation-delay: -4s;"></div>
-                <div class="ripple" style="--animation-delay: -6s;"></div>
-                <div class="ripple" style="--animation-delay: -8s;"></div>
-                <div class="ripple" style="--animation-delay: -10s;"></div>
-                <div class="ripple" style="--animation-delay: -12s;"></div>
-                <div class="ripple" style="--animation-delay: -14s;"></div>
-                <div class="ripple" style="--animation-delay: -16s;"></div>
-                <div class="ripple" style="--animation-delay: -18s;"></div>
+                <div class="ripple" style="--i: 1;"></div>
+                <div class="ripple" style="--i: 2;"></div>
+                <div class="ripple" style="--i: 3;"></div>
+                <div class="ripple" style="--i: 4;"></div>
             </div>
         </div>
         <div class="fade"></div>
@@ -82,44 +77,44 @@
     </section>
 
     <section id="my-work">
-        <div class="section-container">
+        <div class="layout-container">
             <h2>My work</h2>
             <h3>These are some projects I've worked on.</h3>
             <div class="works">
-                <div class="work-item">
+                <div class="work-item" style="--i: 1; --toggler: 1;">
                     <div class="work-item__content">
-                        <img src="img/logo.webp" alt=""class="work-item__image">
-                        <div class="work-item__description">
+                        <a class="work-item__description">
                             <h4>Gráfica Impacto Angra</h4>
                             <h5>Chrome extension to notify customers of a print shop via Whatsapp.</h5>
                             <p><strong>The challenge:</strong> integrate an online store without an open API with a Whatsapp messaging API. The goal was to notify customers when an admin user changes the status of their orders.</p>
                             <p><strong>The solution:</strong> make a Chrome extension to recognize actions in the admin panel and make the necessary API calls.</p>
-                            <p><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><a href="#">Link externo</a></p>
-                        </div>
+                            <p><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><img src="img/icon_external-link.svg" alt="Seguir link"></p>
+                        </a>
+                        <img src="img/work-grafica-impacto.webp" alt=""class="work-item__image">
                     </div>
                 </div>
-                <div class="work-item">
+                <div class="work-item" style="--i: 2; --toggler: 1;">
                     <div class="work-item__content">
-                        <img src="img/logo.webp" alt=""class="work-item__image">
-                        <div class="work-item__description">
-                            <h4>Gráfica Impacto Angra</h4>
-                            <h5>Chrome extension to notify customers of a print shop via Whatsapp.</h5>
-                            <p><strong>The challenge:</strong> integrate an online store without an open API with a Whatsapp messaging API. The goal was to notify customers when an admin user changes the status of their orders.</p>
-                            <p><strong>The solution:</strong> make a Chrome extension to recognize actions in the admin panel and make the necessary API calls.</p>
-                            <p><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><a href="#">Link externo</a></p>
-                        </div>
+                        <a href="https://breakingdoverao.com.br/" class="work-item__description">
+                            <h4>Breaking do Verão</h4>
+                            <h5>Website of a brazilian breakdance contest.</h5>
+                            <p><strong>The challenge:</strong> create a thematic and inviting website to promote the event and attract participants to the tournament.</p>
+                            <p><strong>The solution:</strong> use graffiti graphics, one of the elements of hip hop culture, to create a layout with an urban look. In this project I've created a Elementor plugin to show masked elements.</p>
+                            <p><span class="tag">php</span><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><img src="img/icon_external-link.svg" alt="Seguir link"></p>
+                        </a>
+                        <img src="img/work-bdv2024.webp" alt=""class="work-item__image">
                     </div>
                 </div>
-                <div class="work-item">
+                <div class="work-item" style="--i: 3; --toggler: 1;">
                     <div class="work-item__content">
-                        <img src="img/logo.webp" alt=""class="work-item__image">
-                        <div class="work-item__description">
-                            <h4>Gráfica Impacto Angra</h4>
-                            <h5>Chrome extension to notify customers of a print shop via Whatsapp.</h5>
-                            <p><strong>The challenge:</strong> integrate an online store without an open API with a Whatsapp messaging API. The goal was to notify customers when an admin user changes the status of their orders.</p>
-                            <p><strong>The solution:</strong> make a Chrome extension to recognize actions in the admin panel and make the necessary API calls.</p>
-                            <p><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><a href="#">Link externo</a></p>
-                        </div>
+                        <a HREF="https://ninamoraes.com.br/portal-do-parceiro/" class="work-item__description">
+                            <h4>Nina Moraes</h4>
+                            <h5>Exclusive section on the website for a partnership program.</h5>
+                            <p><strong>The challenge:</strong> make a portal on Woocommerce where members of an affiliate program can check their commissions and create custom with admin predetermined discounts.</p>
+                            <p><strong>The solution:</strong> create a Wordpress page accessible only to a new user role, plus a plugin that implements the necessary features.</p>
+                            <p><span class="tag">php</span><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><img src="img/icon_external-link.svg" alt="Seguir link"></p>
+                        </a>
+                        <img src="img/work-nina-moraes.webp" alt=""class="work-item__image">
                     </div>
                 </div>
             </div>
@@ -127,15 +122,42 @@
     </section>
 
     <section id="contact">
-        <div class="section-container">
+        <div class="layout-container">
             <h2>Contact</h2>
             <div class="contact-social">
                 <h3>Want to know more about my work or talk to me? You can find me on the platforms below or contact me using the contact form.</h3>
                 <div class="social-links">
-                    <ul>
-                        <li><img src="" alt="LinkedIn">LinkedIn: /filipe-gomes-duarte</li>
-                        <li><img src="" alt="GitHub">GitHub: /filgduarte</li>
-                        <li><img src="" alt="Mastodon">Mastodon: /filipeduarte@bolha.us</li>
+                    <ul class="social">
+                        <li class="social-linkedin" style="--i: 0;">
+                            <a href="https://www.linkedin.com/in/filipe-gomes-duarte/" title="LinkedIn" target="_blank">
+                                <img src="img/icon_linkedin.svg" alt="LinkedIn">
+                                <div class="social-info-container">
+                                    <div class="social-info">
+                                        LinkedIn: <span>/filipe-gomes-duarte</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="social-github" style="--i: 1;">
+                            <a href="https://github.com/filgduarte" title="GitHub" target="_blank">
+                                <img src="img/icon_github.svg" alt="GitHub">
+                                <div class="social-info-container">
+                                    <div class="social-info">
+                                        GitHub: <span>/filgduarte</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="social-mastodon" style="--i: 2;">
+                            <a href="https://bolha.us/@filipeduarte" title="Mastodon" target="_blank">
+                                <img src="img/icon_mastodon.svg" alt="Mastodon">
+                                <div class="social-info-container">
+                                    <div class="social-info">
+                                        Mastodon: <span>@filipeduarte@bolha.us</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -146,7 +168,20 @@
                 <input type="email" id="email" name="email">
                 <label for="Message">Message:</label>
                 <textarea id="message" name="message"></textarea>
-                <button type="submit" class="button-primary">Get in touch</button>
+                <div class="submit-container">
+                    <ul class="social fake">
+                        <li class="social-linkedin" style="--i: 0;">
+                            <img src="img/icon_linkedin.svg" alt="LinkedIn" />
+                        </li>
+                        <li class="social-github" style="--i: 1;">
+                            <img src="img/icon_github.svg" alt="GitHub" />
+                        </li>
+                        <li class="social-mastodon" style="--i: 2;">
+                            <img src="img/icon_mastodon.svg" alt="Mastodon" />
+                        </li>
+                    </ul>
+                    <button type="submit" class="button-primary">Get in touch</button>
+                </div>
             </form>
         </div>
     </section>
@@ -154,26 +189,32 @@
     <aside>
         <div class="layout-container">
             <ul class="social">
-                <li>
-                    <a href="https://www.linkedin.com/in/filipe-gomes-duarte/" target="_blank">
+                <li class="social-linkedin" style="--i: 0;">
+                    <a href="https://www.linkedin.com/in/filipe-gomes-duarte/" title="LinkedIn" target="_blank">
                         <p class="hidden">LinkedIn</p>
-                        <img src="img/icon_linkedin.svg" alt="LinkedIn" />
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.89648 21.8745H0.361328V7.27002H4.89648V21.8745ZM2.62646 5.27783C1.17627 5.27783 0 4.07666 0 2.62646C1.03799e-08 1.92988 0.276716 1.26183 0.769274 0.769274C1.26183 0.276716 1.92988 0 2.62646 0C3.32305 0 3.9911 0.276716 4.48366 0.769274C4.97621 1.26183 5.25293 1.92988 5.25293 2.62646C5.25293 4.07666 4.07617 5.27783 2.62646 5.27783ZM21.8701 21.8745H17.3447V14.7651C17.3447 13.0708 17.3105 10.8979 14.9868 10.8979C12.6289 10.8979 12.2676 12.7388 12.2676 14.6431V21.8745H7.73731V7.27002H12.0869V9.26221H12.1504C12.7559 8.11475 14.2349 6.90381 16.4414 6.90381C21.0312 6.90381 21.875 9.92627 21.875 13.8521V21.8745H21.8701Z" />
+                        </svg>
                     </a>
                 </li>
-                <li>
-                    <a href="https://github.com/filgduarte" target="_blank">
+                <li class="social-github" style="--i: 1;">
+                    <a href="https://github.com/filgduarte" title="GitHub" target="_blank">
                         <p class="hidden">GitHub</p>
-                        <img src="img/icon_github.svg" alt="GitHub" />
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.10059 19.0137C8.10059 19.1113 7.98828 19.1895 7.84668 19.1895C7.68555 19.2041 7.57324 19.126 7.57324 19.0137C7.57324 18.916 7.68555 18.8379 7.82715 18.8379C7.97363 18.8232 8.10059 18.9014 8.10059 19.0137ZM6.58203 18.7939C6.54785 18.8916 6.64551 19.0039 6.79199 19.0332C6.91895 19.082 7.06543 19.0332 7.09473 18.9355C7.12402 18.8379 7.03125 18.7256 6.88477 18.6816C6.75781 18.6475 6.61621 18.6963 6.58203 18.7939ZM8.74023 18.7109C8.59863 18.7451 8.50098 18.8379 8.51562 18.9502C8.53027 19.0479 8.65723 19.1113 8.80371 19.0771C8.94531 19.043 9.04297 18.9502 9.02832 18.8525C9.01367 18.7598 8.88184 18.6963 8.74023 18.7109ZM11.9531 0C5.18066 0 0 5.1416 0 11.9141C0 17.3291 3.4082 21.9629 8.27637 23.5938C8.90137 23.7061 9.12109 23.3203 9.12109 23.0029C9.12109 22.7002 9.10645 21.0303 9.10645 20.0049C9.10645 20.0049 5.68848 20.7373 4.9707 18.5498C4.9707 18.5498 4.41406 17.1289 3.61328 16.7627C3.61328 16.7627 2.49512 15.9961 3.69141 16.0107C3.69141 16.0107 4.90723 16.1084 5.57617 17.2705C6.64551 19.1553 8.4375 18.6133 9.13574 18.291C9.24805 17.5098 9.56543 16.9678 9.91699 16.6455C7.1875 16.3428 4.43359 15.9473 4.43359 11.25C4.43359 9.90723 4.80469 9.2334 5.58594 8.37402C5.45898 8.05664 5.04395 6.74805 5.71289 5.05859C6.7334 4.74121 9.08203 6.37695 9.08203 6.37695C10.0586 6.10352 11.1084 5.96191 12.1484 5.96191C13.1885 5.96191 14.2383 6.10352 15.2148 6.37695C15.2148 6.37695 17.5635 4.73633 18.584 5.05859C19.2529 6.75293 18.8379 8.05664 18.7109 8.37402C19.4922 9.23828 19.9707 9.91211 19.9707 11.25C19.9707 15.9619 17.0947 16.3379 14.3652 16.6455C14.8145 17.0312 15.1953 17.7637 15.1953 18.9111C15.1953 20.5566 15.1807 22.5928 15.1807 22.9932C15.1807 23.3105 15.4053 23.6963 16.0254 23.584C20.9082 21.9629 24.2188 17.3291 24.2188 11.9141C24.2188 5.1416 18.7256 0 11.9531 0ZM4.74609 16.8408C4.68262 16.8896 4.69727 17.002 4.78027 17.0947C4.8584 17.1729 4.9707 17.207 5.03418 17.1436C5.09766 17.0947 5.08301 16.9824 5 16.8896C4.92188 16.8115 4.80957 16.7773 4.74609 16.8408ZM4.21875 16.4453C4.18457 16.5088 4.2334 16.5869 4.33105 16.6357C4.40918 16.6846 4.50684 16.6699 4.54102 16.6016C4.5752 16.5381 4.52637 16.46 4.42871 16.4111C4.33105 16.3818 4.25293 16.3965 4.21875 16.4453ZM5.80078 18.1836C5.72266 18.2471 5.75195 18.3936 5.86426 18.4863C5.97656 18.5986 6.11816 18.6133 6.18164 18.5352C6.24512 18.4717 6.21582 18.3252 6.11816 18.2324C6.01074 18.1201 5.86426 18.1055 5.80078 18.1836ZM5.24414 17.4658C5.16602 17.5146 5.16602 17.6416 5.24414 17.7539C5.32227 17.8662 5.4541 17.915 5.51758 17.8662C5.5957 17.8027 5.5957 17.6758 5.51758 17.5635C5.44922 17.4512 5.32227 17.4023 5.24414 17.4658Z"/>
+                        </svg>
                     </a>
                 </li>
-                <li>
-                    <a href="https://mastodon.com.br/@filgduarte" target="_blank">
+                <li class="social-mastodon" style="--i: 2;">
+                    <a href="https://bolha.us/@filipeduarte" title="Mastodon" target="_blank">
                         <p class="hidden">Mastodon</p>
-                        <img src="img/icon_mastodon.svg" alt="Mastodon" />
+                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.4093 7.18324C20.4093 2.43714 17.2985 1.04554 17.2985 1.04554C14.2458 -0.355828 6.13833 -0.341179 3.1149 1.04554C3.1149 1.04554 0.00356911 2.43714 0.00356911 7.18324C0.00356911 12.8326 -0.318697 19.8493 5.16128 21.2994C7.13931 21.8219 8.83902 21.9342 10.2067 21.8561C12.6877 21.7194 14.0797 20.9723 14.0797 20.9723L13.9967 19.1705C13.9967 19.1705 12.2238 19.7272 10.2311 19.6637C8.25796 19.5953 6.17837 19.4489 5.85464 17.027C5.82463 16.802 5.80995 16.5752 5.8107 16.3483C9.99185 17.3688 13.5573 16.7926 14.5387 16.6754C17.279 16.3483 19.6657 14.6588 19.9699 13.1159C20.4484 10.6842 20.4093 7.18324 20.4093 7.18324ZM16.7414 13.2965H14.4645V7.72034C14.4645 5.29359 11.3395 5.20081 11.3395 8.05726V11.109H9.0773V8.05677C9.0773 5.20033 5.9523 5.2931 5.9523 7.71986V13.296H3.67056C3.67056 7.33411 3.41665 6.07435 4.56949 4.75111C5.83414 3.33997 8.46695 3.2472 9.63931 5.04896L10.2057 6.00111L10.7721 5.04896C11.9494 3.23743 14.5866 3.34974 15.8419 4.75111C16.9997 6.08411 16.7404 7.339 16.7404 13.296L16.7414 13.2965Z"/>
+                        </svg>
                     </a>
                 </li>
             </ul>
-            <a href="#contato" class="button-primary">Get in touch</a>
+            <a href="#contact" class="button-primary">Get in touch</a>
         </div>
     </aside>
 </main>
