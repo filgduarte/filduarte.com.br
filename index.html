@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fil Duarte ▪ web designer & frondend developer</title>
+    <title>Fil Duarte ▪ web designer & frontend developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <!-- HEADER -->
 <header id="main-header">
     <div class="layout-container">
@@ -51,6 +52,8 @@
         <div class="fade"></div>
     </div>
     <section id="hero-about">
+
+<!-- HERO -->
         <section id="hero">
             <div class="hero-content">
                 <div class="hero-image">
@@ -64,18 +67,20 @@
             </div>
         </section>
 
+<!-- ABOUT -->
         <section id="about-me">
             <div class="about-content">
                 <h2>About me</h2>
                 <p>From an early age I was interested in making pages on the internet (remember Microsoft FrontPage?) and in high school I decided to take a <strong>Technical Course in Information Technology</strong>.</p>
                 <p>When it was time to go to college, I ended up deciding to study <strong>Industrial Design</strong> and started working in 2006 as a graphic designer. Due to my development background, I also was always responsible for making websites and web apps in the companies I worke</p>
-                <p>Thanks to that I have accumulated more than 15 years of experience in <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress and MySQL</strong>. Currently I’m pursuing a <strong>Systems Analysis and Development Degree</strong> and studying <strong>ReactJS</strong> and <strong>Laravel</strong> on my fre</p>
+                <p>Thanks to that I have accumulated more than 15 years of experience in <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress and MySQL</strong>. Currently I’m pursuing a <strong>Systems Analysis and Development Degree</strong> and studying <strong>ReactJS</strong> and <strong>Laravel</strong> on my free time.</p>
                 <p>If yout want to know more about me, click the button below and download my CV.</p>
-                <a href="#" class="button-secondary">Download CV</a>
+                <a href="filipe-duarte_cv_en-us.pdf" target="_blank" class="button-secondary">Download CV</a>
             </div>
         </section>
     </section>
 
+<!-- MY WORK -->
     <section id="my-work">
         <div class="layout-container">
             <h2>My work</h2>
@@ -121,6 +126,7 @@
         </div>
     </section>
 
+<!-- CONTACT -->
     <section id="contact">
         <div class="layout-container">
             <h2>Contact</h2>
@@ -181,11 +187,13 @@
                         </li>
                     </ul>
                     <button type="submit" class="button-primary">Get in touch</button>
+                    <div class="submit-message"></div>
                 </div>
             </form>
         </div>
     </section>
 
+<!-- FIXED CONTACT -->
     <aside>
         <div class="layout-container">
             <ul class="social">
@@ -218,7 +226,21 @@
         </div>
     </aside>
 </main>
+<footer>
+    <div class="layout-container">
+        <div>
+            <span>&copy; Filipe Duarte 2023</span>
+            <a href="https://github.com/filgduarte/filduarte.com.br" title="View source code on GitHub." target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                    <path style="fill:currentColor;" d="M10 24.312c-.318 0-.625-.115-.864-.325l-8-7a1.313 1.313 0 0 1 0-1.975l8-7a1.313 1.313 0 1 1 1.73 1.976L3.992 16l6.871 6.012a1.313 1.313 0 0 1-.864 2.3Zm12 0a1.313 1.313 0 0 1-.865-2.3L28.007 16l-6.871-6.012a1.312 1.312 0 1 1 1.729-1.976l8 7a1.312 1.312 0 0 1 0 1.975l-8 7c-.24.21-.547.326-.865.325Zm-9 3a1.312 1.312 0 0 1-1.257-1.687l6-20a1.312 1.312 0 1 1 2.514.75l-6 20a1.313 1.313 0 0 1-1.257.937Z"/>
+                </svg>
+                v1.0
+            </a>
+        </div>
+    </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 <script src="js/script.js"></script>
+<script src="js/sendmail.js"></script>
 </body>
 </html>
