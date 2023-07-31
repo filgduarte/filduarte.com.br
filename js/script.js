@@ -23,6 +23,10 @@ window.addEventListener('load', function () {
     const heroContainer = document.querySelector('.hero-content');
     const myWork = document.querySelector('#my-work');
     const socialItems = document.querySelectorAll('.contact-social li');
+    const experienceElements = document.querySelectorAll('.experience');
+    const now = new Date(Date.now());
+    const starting_date = new Date(2006, 11, 1); // First job
+    const experience = Math.abs(now.getUTCFullYear() - starting_date.getUTCFullYear());
 
 // Change menu items action to trigger lenis scroll
     headerLinks.forEach( headerLink => {
@@ -50,6 +54,11 @@ window.addEventListener('load', function () {
     document.querySelector('aside .button-primary').addEventListener('click', function(e) {
         e.preventDefault();
         lenis.scrollTo( e.currentTarget.getAttribute("href") );
+    });
+
+// Show the updated experience years on Hero
+    experienceElements.forEach(xp => {
+        xp.innerText = experience;
     });
 
 // Social icons animation setup

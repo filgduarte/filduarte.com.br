@@ -13,7 +13,7 @@ form.addEventListener('submit', function(event) {
     .then(data => {
         if (data.success)
         {
-            resultContainer.innerText = "Thank you for reaching out! Your message has been sent.";
+            resultContainer.innerText = "Obrigado por entrar em contato! Sua mensagem foi enviada.";
             return true;
         }
 
@@ -25,16 +25,16 @@ form.addEventListener('submit', function(event) {
 
         if (data.invalidEmail)
         {
-            resultContainer.innerText += "Please, use a valid email.";
+            resultContainer.innerText += "Por favor, use um email válido.";
         }
 
         if (data.fail)
         {
-            resultContainer.innerText = "There was an error sending the message. Try again later.";
+            resultContainer.innerText = "Houve um erro enviando a mensagem, tente novamente.";
         }
     })
     .catch(error => {
         console.error("Fetch error: ", error);
-        resultContainer.innerText = "There was an error sending the message. Try again later.";
+        resultContainer.innerText = "Houve um erro enviando a mensagem, tente novamente.";
     });
 });

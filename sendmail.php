@@ -57,7 +57,7 @@ $headers .= "From: Fil Duarte <" . $my_email . ">\r\n";
 $headers .= "Reply-To: " . $valid_email . "\r\n";
 
 $message_html = "<html>\n<body>\n";
-$message_html .= "<p><strong>Nome:</strong> " . $name . "</p>\n";
+$message_html .= "<p><strong>Nome:</strong> " . $form_fields['name'] . "</p>\n";
 $message_html .= "<p><strong>Email:</strong> " . $valid_email . "</p>\n";
 $message_html .= "<p><strong>Mensagem:</strong><br>" . nl2br($form_fields['message']) . "</p>\n";
 $message_html .= "</body>\n</html>";
