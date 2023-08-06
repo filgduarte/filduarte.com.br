@@ -20,7 +20,7 @@ form.addEventListener('submit', function(event) {
         if (data.empty)
         {
             const emptyFields = data.empty.join(', ');
-            resultContainer.innerText += `Please, fill the fields: ${emptyFields}<br>`;
+            resultContainer.innerText += `Por favor, preencha os campos: ${emptyFields}\n`;
         }
 
         if (data.invalidEmail)

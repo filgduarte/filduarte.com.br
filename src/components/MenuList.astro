@@ -1,0 +1,37 @@
+---
+import MenuListItem from "./MenuListItem.astro";
+---
+
+<ul id="menu-list">
+    <MenuListItem label="Sobre mim" link="#about-me" />
+    <MenuListItem label="Meu trabalho" link="#my-work" />
+    <MenuListItem label="Contato" link="#contact" />
+</ul>
+
+<style>
+ul {
+    position: relative;
+    list-style-type: none;
+}
+
+@media screen and (max-width: 767px) {
+    ul {
+        position: absolute;
+        top: 56px;
+        right: 0;
+        background-color: rgb(var(--color-background-rgb) / 0.85);
+        transform: translateX(100%);
+        transition: transform 300ms ease;
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media (min-width: 768px) {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+}
+</style>

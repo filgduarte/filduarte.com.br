@@ -1,0 +1,50 @@
+---
+const { link, label } = Astro.props;
+---
+
+<li class="menu-list__item">
+    <a href={link}>
+        {label}
+    </a>
+</li>
+
+<style>
+a {
+    display: block;
+    padding: 16px 40px;
+}
+
+@media (min-width: 768px) {
+    li,
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .menu-list__item a {
+        position: relative;
+        padding: 8px;
+        color: var(--color-text);
+        background-image: radial-gradient(circle closest-side, rgb(var(--color-primary-rgb) / 100) 98%, rgb(var(--color-primary-rgb) / 0) 100%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 0 0;
+        transition: background-size 500ms ease,
+                    color 300ms ease;
+    }
+
+    .menu-list__item a:hover {
+        text-decoration: none;
+        color: var(--color-secondary);
+        background-size: 500% 500%;
+    }
+
+    li + li::before {
+        content: '▪';
+        padding: 0 8px;
+        color: var(--color-primary);
+    }
+}
+</style>

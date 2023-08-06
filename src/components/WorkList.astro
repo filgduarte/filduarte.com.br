@@ -1,0 +1,152 @@
+---
+import InlineSVG from "./InlineSVG.astro";
+const allWorks = await Astro.glob('../content/works/*.md');
+---
+
+<div class="works">
+
+{
+allWorks.map( (work, index) => (
+    <div class="work-item" style={`--i: ${index}; --toggler: 1;`}>
+        <div class="work-item__content">
+            <a href={work.frontmatter.link} target="_blank" class="work-item__description">
+                <span set:html={work.compiledContent()} />
+                <ul>
+                    {
+                        work.frontmatter.tags.map( (tag) => (
+                            <li>
+                                {tag}
+                            </li>
+                        ))
+                    }
+                    <li>
+                        <InlineSVG src="/assets/icons/icon_external-link.svg" />
+                    </li>
+                </ul>
+            </a>
+            <img src={`${work.frontmatter.thumbnail}`} alt=""class="work-item__image" />
+        </div>
+    </div>
+))
+}
+</div>
+
+<style>
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.work-item__content {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: clamp(0.75rem, 1.11vw, 1rem);
+}
+
+.work-item__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #FFFFFF;
+}
+
+.work-item__description {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    padding: 2em;
+}
+
+.work-item__description:hover {
+    text-decoration: none;
+}
+
+.work-item__description > span {
+    flex: 2;
+}
+
+ul {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    list-style-type: none;
+}
+
+li:not(:last-child) {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125em 0.5em;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+li + li {
+    margin-left: 0.5em;
+}
+
+li:last-child {
+    margin-left: auto;
+}
+
+li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+    .works {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 4.5rem;
+    }
+
+    .work-item {
+        aspect-ratio: 1;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    .work-item__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 50px var(--color-secondary);
+        transition: transform 500ms ease,
+                    box-shadow 500ms ease;
+        transition-delay: calc(200ms * var(--i) * var(--toggler));
+        transform-style: preserve-3d;
+    }
+
+    .work-item:hover {
+        z-index: 1;
+    }
+
+    .work-item__image,
+    .work-item__description {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+
+    .work-item__image {
+        top: 0;
+        aspect-ratio: 1;
+        transform: rotateY(180deg);
+    }
+}
+</style>

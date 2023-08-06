@@ -1,0 +1,39 @@
+---
+const { src, className, style } = Astro.props;
+const { default: svgRaw } = await import(`/src/${src}?raw`);
+const svgContent = extractSVG(svgRaw);
+
+function extractSVG(svgRaw)
+{
+    const regex = /<svg([^>]*)>(.*?)<\/svg>/gs;
+    const matches = regex.exec(svgRaw);
+
+    if (matches && matches.length >= 3)
+    {
+        const attributes = matches[1].trim();
+        const innerHTML = matches[2];
+
+        const attributesObject = attributes.split(/(\"|\')\s+/gs).reduce((obj, attr) => {
+            const [name, value] = attr.split('=');
+            if (name && value)
+            {
+                obj[name] = value.replace(/['"]/g, '');
+            }
+            return obj;
+        }, {});
+
+        if (className)
+        {
+            attributesObject['class'] = attributesObject['class'] ? `${attributesObject['class']} ${className}` : className;
+        }
+        if (style)
+        {
+            attributesObject['style'] = attributesObject['style'] ? `${attributesObject['style']} ${style}` : style;
+        }
+        return { attributes: attributesObject, innerHTML };
+    }
+}
+---
+<svg {...svgContent.attributes}>
+    <Fragment set:html={svgContent.innerHTML} />
+</svg>

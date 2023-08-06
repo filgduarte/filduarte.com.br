@@ -1,0 +1,116 @@
+---
+import InlineSVG from "./InlineSVG.astro";
+const allSocials = await Astro.glob('../content/socials/*.md');
+allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
+---
+
+<div class="contact-social">
+    <h3>Quer saber mais sobre o meu trabalho ou falar comigo? Você pode me encontrar nas plataformas abaixo ou entrar em contato usando o formulário.</h3>
+
+    <div class="social-links">
+        <ul class="social">
+        {
+        allSocials.map( (social, index) => (
+            <li class={`social-${social.frontmatter.slug}`} style={`--i: ${index};`}>
+                <a href={social.frontmatter.link} title={social.frontmatter.title} target="_blank">
+                    <div class="icon">
+                        <InlineSVG src={social.frontmatter.icon} style="width:48px;height:48px;" />
+                    </div>
+                    <div class="social-info-container">
+                        <div class="social-info">
+                            {social.frontmatter.title}: <span>{social.frontmatter.handler}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        ))
+        }
+        </ul>
+    </div>
+</div>
+
+<style>
+.contact-social {
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-top: 2.5rem;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: var(--color-text);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:hover svg {
+    filter: drop-shadow( 0 0 20px rgb( var(--color-primary-rgb) ) );
+}
+
+a:hover span {
+    text-decoration: underline;
+}
+
+li .social-info-container {
+    display: inline-block;
+    padding-left: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+li .social-info {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    align-items: center;
+}
+
+li .social-info span {
+    font-weight: normal;
+}
+
+.social-icon {
+    width: 3rem;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .contact-social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 4.5rem;
+    }
+
+    li .social-info {
+        transform: translateX(calc(-100% - 1rem));
+        transition: transform 500ms ease;
+        transition-delay: calc(400ms + (100ms * var(--i)));
+    }
+
+    li .social-info {
+        transform: none;
+    }
+
+    .icon {
+        opacity: 0;
+        transition: opacity 500ms, filter 300ms;
+        transition-delay: calc(100ms * var(--i)), 0s;
+    }
+
+    .icon {
+        transition: opacity 100ms, filter 300ms;
+        transition-delay: calc(400ms + (100ms * var(--i))), 0s;
+        opacity: 1;
+    }
+}
+</style>

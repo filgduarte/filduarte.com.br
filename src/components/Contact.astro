@@ -1,0 +1,66 @@
+---
+import ContactForm from "../components/ContactForm.astro";
+import ContactSocial from "../components/ContactSocial.astro";
+---
+
+<section id="contact">
+    <div class="layout-container">
+        <h2>Contato</h2>
+        <ContactSocial />
+        <ContactForm />
+    </div>
+</section>
+
+<style>
+section#contact {
+    display: flex;
+    align-items: center;
+    padding: 88px 0 0;
+    max-width: 100%;
+    background-image: linear-gradient(
+                        rgb(var(--color-background-rgb) / 0),
+                        var(--color-secondary)
+                    );
+}
+
+#contact .layout-container {
+    padding: 2rem;
+}
+.contact-visible #contact .contact-form button {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    #contact .layout-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem 3rem;
+    }
+    
+    #contact h2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .contact-visible .contact-social .social-links li .social-info {
+        transform: none;
+    }
+
+    .contact-visible .contact-social img {
+        transition: opacity 100ms, filter 300ms;
+        transition-delay: calc(400ms + (100ms * var(--i))), 0s;
+        opacity: 1;
+    }
+
+    .contact-visible .contact-form ul {
+        visibility: visible;
+    }
+
+    .contact-visible .contact-form li {
+        opacity: 0;
+        transform: translate(var(--translate-amount)) scale(2.1);
+        transition: transform 500ms ease, opacity 100ms;
+        transition-delay: calc(100ms * var(--i)), calc(400ms + (100ms * var(--i)));
+    }
+}
+</style>

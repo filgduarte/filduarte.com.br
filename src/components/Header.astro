@@ -1,0 +1,146 @@
+---
+import MenuList from "./MenuList.astro";
+---
+
+<header id="main-header">
+
+    <div class="layout-container">
+        <div id="header-logo">
+            <a href="#">
+                <img src="/images/logo.webp" alt="Filipe Duarte Logo">
+                <h1>Filipe Duarte</h1>
+            </a>
+        </div>
+
+        <div id="main-menu-container">
+            <nav id="main-menu">
+                <button class="menu-toggle" aria-controls="menu-list">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="hidden">Menu</span>
+                </button>
+
+                <MenuList />
+            </nav>
+        </div>
+    </div>
+
+</header>
+
+<style>
+#main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 0 8px 16px;
+    height: 56px;
+    z-index: 99;
+    transition: background-color 300ms;
+}
+
+#main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: transform 300ms ease;
+}
+
+.layout-container {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    padding: 0;
+}
+
+#header-logo {
+    position: relative;
+    transform: translateY(calc(-100% - 16px));
+    transition: transform 300ms ease;
+}
+
+#header-logo a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 128px;
+}
+
+#header-logo a:hover {
+    text-decoration: none;
+}
+
+#header-logo a img {
+    height: 40px;
+    margin-right: 16px;
+}
+
+a h1 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 767px) {
+    #main-header {
+        padding: 8px 32px;
+    }
+    
+    .menu-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 56px;
+        height: 56px;
+        background-color: transparent;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        margin: 0 auto;
+        width: 1.5rem;
+        height: 0.125rem;
+        background-color: var(--color-primary);
+        transform-origin: center;
+        transition: transform 300ms ease;
+    }
+    
+    .menu-toggle span + span {
+        margin-top: 6px;
+    }
+    
+    nav.active .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+    
+    nav.active .menu-toggle span:nth-child(2) {
+        transform: scaleX(0);
+    }
+    
+    nav.active .menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
+
+    .menu-toggle span.hidden {
+        visibility: hidden;
+        height: 0px !important;
+    }
+
+    nav.active #menu-list {
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav {
+        height: 100%;
+    }
+}
+</style>

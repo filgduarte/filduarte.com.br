@@ -1,0 +1,105 @@
+<section id="hero">
+    <div class="hero-content">
+        <div class="hero-image">
+            <img src="/images/profile-picture.webp" alt="Filipe Duarte" class="profile-picture">
+        </div>
+        <div class="hero-text">
+            <h2>Designer e desenvolvedor</h2>
+            <p>com <span class="experience">16</span>+ anos de experiência em encontrar soluções criativas.</p>
+            <p>Meu nome é Filipe Duarte.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+#hero {
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    padding: 32px;
+    width: 100%;
+    height: 100%;
+    max-width: var(--max-width);
+}
+
+.hero-text {
+    transition: opacity 300ms 500ms linear;
+}
+
+.hero-text h2 {
+    margin: 32px 0 0;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+#hero :is(h2, p) {
+    font-size: clamp(1.5rem, 3.8vw, 3.5rem);
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    background-image: url('../images/logo.webp');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    mask-image: url('../images/profile-mask.webp');
+    mask-position: 0 0;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('../images/profile-mask.webp');
+    -webkit-mask-position: 0 0;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    transition: background-position 1s ease-in-out,
+                mask-position 1s ease-in-out,
+                -webkit-mask-position 1s ease-in-out;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 577px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    #hero {
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero-image img {
+        width: 42%;
+    }
+
+    .hero-text {
+        position: absolute;
+        right: 32px;
+        width: 63%;
+    }
+}
+</style>

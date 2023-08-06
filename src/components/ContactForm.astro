@@ -1,0 +1,70 @@
+---
+import InlineSVG from "./InlineSVG.astro";
+const allSocials = await Astro.glob('../content/socials/*.md');
+allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
+---
+
+<form class="contact-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email">
+    <label for="message">Mensagem:</label>
+    <textarea id="message" name="message"></textarea>
+    <div class="submit-container">
+        <ul class="social fake">
+        {
+        allSocials.map( (social, index) => (
+            <li class={`social-${social.frontmatter.slug}`} style={`--i: ${index};width:24px;height:24px;`}>
+                <InlineSVG src={social.frontmatter.icon} />
+            </li>
+        ))
+        }
+        </ul>
+        <button type="submit" class="button-primary">Entrar em contato</button>
+        <div class="submit-message"></div>
+    </div>
+</form>
+
+<style>
+ul {
+    display: none;
+}
+
+button {
+    order: 3;
+    float: right;
+    opacity: 0;
+}
+
+.submit-message {
+    order: 2;
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    .submit-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        pointer-events: none;
+        visibility: hidden;
+    }
+    
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+    }
+}
+</style>

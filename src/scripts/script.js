@@ -63,7 +63,8 @@ window.addEventListener('load', function () {
 
 // Social icons animation setup
     socialItems.forEach( contactItem => {
-        const fakeItem = document.querySelector(`.fake .${contactItem.className}`);
+        const socialClassName = Array.from(contactItem.classList).find(className => className.startsWith("social-"));
+        const fakeItem = document.querySelector(`.fake .${socialClassName}`);
         const fakeItemOffset = {
             x: fakeItem.offsetLeft,
             y: fakeItem.offsetTop,

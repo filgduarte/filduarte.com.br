@@ -1,0 +1,40 @@
+<section id="about-me">
+    <div class="about-content">
+        <h2>Sobre mim</h2>
+        <p>Desde pequeno eu me interessava em fazer páginas na internet (lembra do Microsoft FrontPage?) e no Ensino Médio decidi fazer um <strong>Curso Técnico de Informática</strong>.</p>
+        <p>Quando fui para a faculdade, acabei escolhendo fazer <strong>Desenho Industrial </strong> e comecei a trabalhar em 2006 como designer gráfico. Devido ao meu histórico com desenvolvimento, eu também sempre acabava ficando responsável por fazer sites e web apps nas empresas em que trabalhei.</p>
+        <p>Graças a isso eu acumulei mais de <span class="experience">17</span> anos de experiência em <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress e MySQL</strong>. Atualmente estou cursando Análise e Desenvolvimento de Sistemas e estudando <strong>ReactJS</strong> e <strong>Laravel</strong> no meu tempo livre.</p>
+        <p>Se quiser saber mais sobre mim, clique no botão abaixo e baixe meu currículo.</p>
+        <a href="filipe-duarte_cv_pt-br.pdf" target="_blank" class="button-secondary">Baixar CV</a>
+    </div>
+</section>
+
+<style>
+#about-me {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 32px;
+    height: 100%;
+}
+
+strong {
+    color: var(--color-primary);
+}
+
+.button-secondary {
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        width: 50%;
+        opacity: 0;
+        transition: opacity 700ms 200ms linear;
+    }
+    
+    .about-text {
+        margin-left: 64px;
+    }
+}
+</style>
