@@ -244,157 +244,19 @@ button {
 /*
 *  CONTACT
 */
-
-section#contact {
-    display: flex;
-    align-items: center;
-    padding: 88px 0 0;
-    max-width: 100%;
-    background-image: linear-gradient(
-                        rgb(var(--color-background-rgb) / 0),
-                        var(--color-secondary)
-                    );
-}
-
-#contact .layout-container {
-    padding: 2rem;
-}
-
-#contact .contact-social {
-    margin-bottom: 2rem;
-}
-
-#contact .social-links ul {
-    list-style-type: none;
-}
-
-#contact .social-links li {
-    margin-top: 2.5rem;
-}
-
-#contact .social-links a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: var(--color-text);
-}
-
-#contact .social-links a:hover {
-    text-decoration: none;
-}
-
-#contact .social-links a:hover img {
-    filter: drop-shadow( 0 0 20px rgb( var(--color-primary-rgb) ) );
-}
-
-#contact .social-links a:hover span {
-    text-decoration: underline;
-}
-
-#contact .social-links li .social-info-container {
-    display: inline-block;
-    padding-left: 1rem;
-    width: 100%;
-    overflow: hidden;
-}
-
-#contact .social-links li .social-info {
-    display: grid;
-    grid-template-columns: 6rem auto;
-    align-items: center;
-}
-
-#contact .social-links li .social-info span {
-    font-weight: normal;
-}
-
-#contact .social-links img {
-    width: 3rem;
-    z-index: 1;
-}
-
-.contact-form ul {
-    display: none;
-}
-
-#contact .contact-form button {
-    order: 3;
-    float: right;
-    opacity: 0;
-}
-
 .contact-visible #contact .contact-form button {
     opacity: 1;
 }
 
-.submit-message {
-    order: 2;
-    text-align: right;
-}
-
 @media (min-width: 768px) {
-    #contact .layout-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.75rem 3rem;
-    }
-    
-    #contact h2 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-
-    .contact-social {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 4.5rem;
-    }
-
-    .contact-social .social-links li .social-info {
-        transform: translateX(calc(-100% - 1rem));
-        transition: transform 500ms ease;
-        transition-delay: calc(400ms + (100ms * var(--i)));
-    }
-
-    .contact-visible .contact-social .social-links li .social-info {
-        transform: none;
-    }
-
-    .contact-social img {
-        opacity: 0;
-        transition: opacity 500ms, filter 300ms;
-        transition-delay: calc(100ms * var(--i)), 0s;
-    }
-
-    .contact-visible .contact-social img {
+    .contact-visible .contact-social .icon {
         transition: opacity 100ms, filter 300ms;
         transition-delay: calc(400ms + (100ms * var(--i))), 0s;
         opacity: 1;
     }
 
-    .submit-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .contact-form ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style-type: none;
-        pointer-events: none;
-        visibility: hidden;
-    }
-    
-    .contact-form li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 48px;
-        height: 48px;
+    .contact-visible .contact-social li .social-info {
+        transform: none;
     }
 
     .contact-visible .contact-form ul {
@@ -412,80 +274,13 @@ section#contact {
 /*
 *  FIXED SOCIAL / CONTACT BUTTONS
 */
-
-aside {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    z-index: 9;
-}
-
-aside .layout-container {
-    padding: 32px;
-}
-
-aside ul {
-    display: none;
-}
-
-aside a {
-    background-image: radial-gradient(circle closest-side, rgb(var(--color-primary-rgb) / 100) 98%, rgb(var(--color-primary-rgb) / 0) 100%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 0 0;
-    transition: background-size 500ms ease,
-                color 300ms ease;
-}
-
-aside a:hover {
-    color: var(--color-secondary);
-    background-size: 300% 300%;
-}
-
-aside svg {
-    fill: currentColor;
-}
-
 .contact-visible aside {
     visibility: hidden;
     pointer-events: none;
 }
 
 @media (min-width: 768px) {
-    aside .layout-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 16px;
-    }
-
-    aside ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style-type: none;
-    }
-
-    aside li {
-        transition: opacity 500ms;
-        transition-delay: calc(100ms * var(--i));
-    }
-
     .contact-visible aside li {
         opacity: 0;
-    }
-    
-    aside li,
-    aside li a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 48px;
-        height: 48px;
-    }
-
-    aside .button-primary {
-        max-width: 256px;
     }
 }

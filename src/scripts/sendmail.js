@@ -5,7 +5,7 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(form);
 
-    fetch("./sendmail.php", {
+    fetch("/src/scripts/sendmail.php", {
         method: "POST",
         body: formData
     })

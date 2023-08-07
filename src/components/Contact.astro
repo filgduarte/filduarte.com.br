@@ -26,9 +26,6 @@ section#contact {
 #contact .layout-container {
     padding: 2rem;
 }
-.contact-visible #contact .contact-form button {
-    opacity: 1;
-}
 
 @media (min-width: 768px) {
     #contact .layout-container {
@@ -40,27 +37,6 @@ section#contact {
     #contact h2 {
         grid-column-start: 1;
         grid-column-end: 3;
-    }
-
-    .contact-visible .contact-social .social-links li .social-info {
-        transform: none;
-    }
-
-    .contact-visible .contact-social img {
-        transition: opacity 100ms, filter 300ms;
-        transition-delay: calc(400ms + (100ms * var(--i))), 0s;
-        opacity: 1;
-    }
-
-    .contact-visible .contact-form ul {
-        visibility: visible;
-    }
-
-    .contact-visible .contact-form li {
-        opacity: 0;
-        transform: translate(var(--translate-amount)) scale(2.1);
-        transition: transform 500ms ease, opacity 100ms;
-        transition-delay: calc(100ms * var(--i)), calc(400ms + (100ms * var(--i)));
     }
 }
 </style>

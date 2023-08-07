@@ -1,6 +1,6 @@
 ---
-const { src, className, style } = Astro.props;
-const { default: svgRaw } = await import(`/src/${src}?raw`);
+const { name, className, style } = Astro.props;
+const { default: svgRaw } = await import(`../assets/icons/${name}.svg?raw`);
 const svgContent = extractSVG(svgRaw);
 
 function extractSVG(svgRaw)

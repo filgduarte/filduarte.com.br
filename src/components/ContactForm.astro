@@ -1,22 +1,22 @@
 ---
-import InlineSVG from "./InlineSVG.astro";
+import Icon from "./Icon.astro";
 const allSocials = await Astro.glob('../content/socials/*.md');
 allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
 ---
 
 <form class="contact-form">
     <label for="name">Nome:</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" required>
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email">
+    <input type="email" id="email" name="email" required >
     <label for="message">Mensagem:</label>
-    <textarea id="message" name="message"></textarea>
+    <textarea id="message" name="message" required minlength="10"></textarea>
     <div class="submit-container">
         <ul class="social fake">
         {
         allSocials.map( (social, index) => (
             <li class={`social-${social.frontmatter.slug}`} style={`--i: ${index};width:24px;height:24px;`}>
-                <InlineSVG src={social.frontmatter.icon} />
+                <Icon name={social.frontmatter.icon} />
             </li>
         ))
         }

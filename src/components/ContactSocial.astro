@@ -1,5 +1,5 @@
 ---
-import InlineSVG from "./InlineSVG.astro";
+import Icon from "./Icon.astro";
 const allSocials = await Astro.glob('../content/socials/*.md');
 allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
 ---
@@ -14,7 +14,7 @@ allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontm
             <li class={`social-${social.frontmatter.slug}`} style={`--i: ${index};`}>
                 <a href={social.frontmatter.link} title={social.frontmatter.title} target="_blank">
                     <div class="icon">
-                        <InlineSVG src={social.frontmatter.icon} style="width:48px;height:48px;" />
+                        <Icon name={social.frontmatter.icon} style="width:48px;height:48px;" />
                     </div>
                     <div class="social-info-container">
                         <div class="social-info">
@@ -42,22 +42,22 @@ li {
     margin-top: 2.5rem;
 }
 
-a {
+.contact-social a {
     display: flex;
     align-items: center;
     width: 100%;
     color: var(--color-text);
 }
 
-a:hover {
+.contact-social a:hover {
     text-decoration: none;
 }
 
-a:hover svg {
+.contact-social a:hover .icon {
     filter: drop-shadow( 0 0 20px rgb( var(--color-primary-rgb) ) );
 }
 
-a:hover span {
+.contact-social a:hover span {
     text-decoration: underline;
 }
 
@@ -97,20 +97,10 @@ li .social-info span {
         transition-delay: calc(400ms + (100ms * var(--i)));
     }
 
-    li .social-info {
-        transform: none;
-    }
-
     .icon {
         opacity: 0;
         transition: opacity 500ms, filter 300ms;
         transition-delay: calc(100ms * var(--i)), 0s;
-    }
-
-    .icon {
-        transition: opacity 100ms, filter 300ms;
-        transition-delay: calc(400ms + (100ms * var(--i))), 0s;
-        opacity: 1;
     }
 }
 </style>

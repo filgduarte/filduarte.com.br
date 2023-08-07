@@ -1,5 +1,5 @@
 ---
-import InlineSVG from "./InlineSVG.astro";
+import Icon from "./Icon.astro";
 const allWorks = await Astro.glob('../content/works/*.md');
 ---
 
@@ -20,7 +20,7 @@ allWorks.map( (work, index) => (
                         ))
                     }
                     <li>
-                        <InlineSVG src="/assets/icons/icon_external-link.svg" />
+                        <Icon name="icon_external-link" style="width: 16px; height: 16px;" />
                     </li>
                 </ul>
             </a>
@@ -90,10 +90,11 @@ li + li {
 }
 
 li:last-child {
+    position: relative;
     margin-left: auto;
 }
 
-li::before {
+li:not(:last-child)::before {
     content: '';
     display: block;
     position: absolute;

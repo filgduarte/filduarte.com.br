@@ -1,5 +1,5 @@
 ---
-import InlineSVG from "./InlineSVG.astro";
+import Icon from "./Icon.astro";
 const allSocials = await Astro.glob('../content/socials/*.md');
 allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
 ---
@@ -12,7 +12,7 @@ allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontm
             <li class={`social-${social.frontmatter.slug}`} style={`--i: ${index};`}>
             <a href="https://www.linkedin.com/in/filipe-gomes-duarte/" title="LinkedIn" target="_blank">
                 <p class="hidden">{social.frontmatter.title}</p>
-                <InlineSVG src={social.frontmatter.icon} style="width:24px;height:24px;" />
+                <Icon name={social.frontmatter.icon} style="width:24px;height:24px;" />
             </a>
         </li>
         ))
@@ -21,3 +21,69 @@ allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontm
         <a href="#contact" class="button-primary">Entrar em contato</a>
     </div>
 </aside>
+
+<style>
+aside {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+aside .layout-container {
+    padding: 32px;
+}
+
+aside ul {
+    display: none;
+}
+
+aside a {
+    background-image: radial-gradient(circle closest-side, rgb(var(--color-primary-rgb) / 100) 98%, rgb(var(--color-primary-rgb) / 0) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0 0;
+    transition: background-size 500ms ease,
+                color 300ms ease;
+}
+
+aside a:hover {
+    color: var(--color-secondary);
+    background-size: 300% 300%;
+}
+
+@media (min-width: 768px) {
+    aside .layout-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+    }
+
+    aside ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    aside li {
+        transition: opacity 500ms;
+        transition-delay: calc(100ms * var(--i));
+    }
+
+    aside li,
+    aside li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+    }
+
+    aside .button-primary {
+        max-width: 256px;
+    }
+}
+</style>
