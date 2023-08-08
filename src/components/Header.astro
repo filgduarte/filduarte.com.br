@@ -96,6 +96,7 @@ a h1 {
         width: 56px;
         height: 56px;
         background-color: transparent;
+        z-index: 1;
     }
     
     .menu-toggle span {
@@ -126,11 +127,8 @@ a h1 {
 
     .menu-toggle span.hidden {
         visibility: hidden;
+        margin: 0;
         height: 0px !important;
-    }
-
-    nav.active #menu-list {
-        transform: translateX(0);
     }
 }
 

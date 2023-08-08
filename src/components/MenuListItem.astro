@@ -9,9 +9,10 @@ const { link, label } = Astro.props;
 </li>
 
 <style>
-a {
+.menu-list__item a {
     display: block;
     padding: 16px 40px;
+    color: var(--color-text);
 }
 
 @media (min-width: 768px) {
@@ -26,7 +27,6 @@ a {
     .menu-list__item a {
         position: relative;
         padding: 8px;
-        color: var(--color-text);
         background-image: radial-gradient(circle closest-side, rgb(var(--color-primary-rgb) / 100) 98%, rgb(var(--color-primary-rgb) / 0) 100%);
         background-repeat: no-repeat;
         background-position: center;

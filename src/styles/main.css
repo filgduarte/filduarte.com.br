@@ -188,6 +188,11 @@ button {
     display: block;
 }
 
+nav.active #menu-list {
+    pointer-events: auto;
+    clip-path: circle( calc(100% + 112px) at calc(100% - 28px) 28px );
+}
+
 /*
 *  ANIMATED BACKGROUND
 */
