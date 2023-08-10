@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
     headerLinks.forEach( headerLink => {
         headerLink.addEventListener('click', function(e) {
             e.preventDefault();
-            target = e.currentTarget.getAttribute("href");
+            const target = e.currentTarget.getAttribute("href");
 
             if (target == "#")
             {
@@ -42,6 +42,8 @@ window.addEventListener('load', function () {
             {
                 lenis.scrollTo( target );
             }
+            
+            document.getElementById('main-menu').classList.remove('active');
         });
     });
 
