@@ -10,7 +10,7 @@ allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontm
         {
         allSocials.map( (social, index) => (
             <li class={`social-${social.frontmatter.slug}`} style={`--i: ${index};`}>
-            <a href="https://www.linkedin.com/in/filipe-gomes-duarte/" title="LinkedIn" target="_blank">
+            <a href={social.frontmatter.link} title={social.frontmatter.title} target="_blank">
                 <p class="hidden">{social.frontmatter.title}</p>
                 <Icon name={social.frontmatter.icon} style="width:24px;height:24px;" />
             </a>

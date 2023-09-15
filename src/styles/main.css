@@ -295,3 +295,7 @@ nav.active #menu-list {
         opacity: 0;
     }
 }
+
+svg path {
+    fill: currentColor;
+}

@@ -1,0 +1,105 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<div class="work-featured">
+    <div class="work-featured__slider">
+        <div class="slide">
+            <img src="/images/works/mockup-impacto-1.webp" alt="">
+        </div>
+    </div>
+    <div class="work-featured__content">
+        <h3>Gráfica Impacto Notificações</h3>
+        <h4>Extensão de Chrome para envio de notificações via Whatsapp.</h4>
+        <p>A Gráfica Impacto enfrentava uma dificuldade com sua loja online: muitos clientes não liam os e-mails de notificação sobre atualizações em seus pedidos. Além disso, a plataforma em que a loja está hospedada não possui API aberta, o que impossibilita a integração com ferramentas externas.</p>
+        <p>Fui contatado para encontrar uma solução e, ao constatar que todos os funcionários utilizavam o Google Chrome conectados a uma única conta da empresa, tive a ideia de criar uma extensão para o navegador.</p>
+        <p>Essa extensão detecta cliques nos campos de status no painel de administração e envia notificações via WhatsApp usando a API de um outro serviço que eles já possuíam. As notificações podem ser personalizadas com os códigos de formatação do Whatsapp e inserção de variáveis como nome do cliente, número do pedido etc.</p>
+        <p>A solução superou as expectativas do cliente, eliminando a necessidade de notificações manuais.</p>
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>
+                <Icon name="icon_external-link" style="width: 16px; height: 16px;" />
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.work-featured {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(144deg, #3A0CA3 0%, #100C43 200%);
+}
+
+.work-featured > div {
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .work-featured > div {
+        width: 50%;
+        padding: 2rem;
+    }
+}
+
+.work-featured h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.work-featured h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+ul {
+display: flex;
+align-items: flex-end;
+margin: 0;
+list-style-type: none;
+}
+
+li:not(:last-child) {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125em 0.5em;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+li + li {
+    margin-left: 0.5em;
+}
+
+li:last-child {
+    position: relative;
+    margin-left: auto;
+}
+
+li:not(:last-child)::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.work-featured img {
+    aspect-ratio: 1.2;
+    width: 100%;
+    object-position: top center;
+    object-fit: cover;
+}
+</style>

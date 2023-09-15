@@ -1,6 +1,7 @@
 ---
 import Icon from "./Icon.astro";
 const allWorks = await Astro.glob('../content/works/*.md');
+allWorks.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
 ---
 
 <div class="works">
