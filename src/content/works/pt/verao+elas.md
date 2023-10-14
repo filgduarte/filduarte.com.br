@@ -10,4 +10,4 @@ order: 3
 
 **A solução:** utilizei o Elementor para construir o layout, mas decidi fazer as animações manualmente em CSS para ter um maior controle.
 
-Projeto feito na Kria Digital (kriadigital.com.br)
+Projeto feito com a Kria Digital (kriadigital.com.br)

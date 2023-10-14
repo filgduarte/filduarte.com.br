@@ -1,6 +1,10 @@
 ---
 import Icon from "./Icon.astro";
-const allWorks = await Astro.glob('../content/works/*.md');
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const allWorksAllLanguages = await Astro.glob('../content/works/*/*.md');
+const allWorks = allWorksAllLanguages.filter( (work) => work.file.includes(`/${lang}/`) );
 allWorks.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
 ---
 

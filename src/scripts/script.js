@@ -12,7 +12,7 @@ requestAnimationFrame(raf);
 
 window.addEventListener('load', function () {
     const body = document.querySelector('body');
-    const headerLinks = document.querySelectorAll('#main-header a');
+    const headerLinks = document.querySelectorAll('#main-header a:not(.lang)');
     const menuToggleButton = document.querySelector('.menu-toggle');
     const background = document.querySelector('.background');
     const ripples = document.querySelector('.ripples');

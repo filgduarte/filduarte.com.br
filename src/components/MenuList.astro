@@ -1,11 +1,18 @@
 ---
 import MenuListItem from "./MenuListItem.astro";
+import LanguageListItem from "./LanguageListItem.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <ul id="menu-list">
-    <MenuListItem label="Sobre mim" link="#about-me" />
-    <MenuListItem label="Meu trabalho" link="#my-work" />
-    <MenuListItem label="Contato" link="#contact" />
+    <MenuListItem label={t('about.title')} link="#about-me" />
+    <MenuListItem label={t('work.title')} link="#my-work" />
+    <MenuListItem label={t('contact.title')} link="#contact" />
+    
+    <LanguageListItem />
 </ul>
 
 <style>

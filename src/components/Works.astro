@@ -1,13 +1,15 @@
 ---
 import WorkList from "../components/WorkList.astro";
-import WorkFeatured from "./WorkFeatured.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="my-work">
     <div class="layout-container">
-        <h2>Meu trabalho</h2>
-        <h3>Esses são alguns dos meus trabalhos mais recentes.</h3>
-        <!-- <WorkFeatured /> -->
+        <h2>{t('work.title')}</h2>
+        <h3>{t('work.subtitle')}</h3>
         <WorkList />
     </div>
 </section>

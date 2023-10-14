@@ -1,0 +1,54 @@
+---
+import { languages } from '../i18n/content';
+import { getLangFromUrl } from '../i18n/utils';
+
+const currLang = getLangFromUrl(Astro.url);
+---
+
+<li class="menu-list__item languages">
+    {
+        Object.entries(languages).map(([lang, label]) => (
+            <a href={`../${lang}`} title={label} class={lang == currLang ? 'lang current' : 'lang'}>
+                {lang}
+            </a>
+        ))
+    }
+    
+</li>
+
+<style>
+.menu-list__item a {
+    display: block;
+    padding: 16px 40px;
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+    li,
+    .menu-list__item a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8px;
+        height: 100%;
+    }
+
+    .menu-list__item a {
+        position: relative;
+        padding: 8px;
+        height: auto;
+        aspect-ratio: 1;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+
+    a.current {
+        border: 1px solid var(--color-primary);
+        font-weight: bold;
+    }
+
+    .menu-list__item a:hover {
+        text-decoration: none;
+    }
+}
+</style>

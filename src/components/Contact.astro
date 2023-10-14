@@ -1,11 +1,15 @@
 ---
 import ContactForm from "../components/ContactForm.astro";
 import ContactSocial from "../components/ContactSocial.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="contact">
     <div class="layout-container">
-        <h2>Contato</h2>
+        <h2>{t('contact.title')}</h2>
         <ContactSocial />
         <ContactForm />
     </div>

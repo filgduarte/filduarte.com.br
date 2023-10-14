@@ -1,12 +1,16 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section id="about-me">
     <div class="layout-container">
         <div class="about-content">
-            <h2>Sobre mim</h2>
-            <p>Desde pequeno eu me interessava em fazer páginas na internet (lembra do Microsoft FrontPage?) e no Ensino Médio decidi fazer um <strong>Curso Técnico de Informática</strong>.</p>
-            <p>Quando fui para a faculdade, acabei escolhendo fazer <strong>Desenho Industrial </strong> e comecei a trabalhar em 2006 como designer gráfico. Devido ao meu histórico com desenvolvimento, eu também sempre acabava ficando responsável por fazer sites e web apps nas empresas em que trabalhei.</p>
-            <p>Graças a isso eu acumulei mais de <span class="experience">17+</span> anos de experiência em <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress e MySQL</strong>. Atualmente estou cursando Análise e Desenvolvimento de Sistemas e estudando <strong>ReactJS</strong>, <strong>TypeScript</strong> e <strong>Laravel</strong> no meu tempo livre.</p>
-            <p>Se quiser saber mais sobre mim, clique no botão abaixo e baixe meu currículo.</p>
-            <a href="filipe-duarte_cv_pt-br.pdf" target="_blank" class="button-secondary">Baixar CV</a>
+            <h2>{t('about.title')}</h2>
+            <Fragment set:html={t('about.text')}></Fragment>
+            <a href={t('about.link')} target="_blank" class="button-secondary">{t('about.button')}</a>
         </div>
     </div>
 </section>

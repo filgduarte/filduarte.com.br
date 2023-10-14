@@ -1,12 +1,18 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section id="hero">
     <div class="hero-content">
         <div class="hero-image">
-            <img src="images/profile-picture.webp" alt="Filipe Duarte" class="profile-picture">
+            <img src="../images/profile-picture.webp" alt="Filipe Duarte" class="profile-picture">
         </div>
         <div class="hero-text">
-            <h2>Designer e desenvolvedor</h2>
-            <p>com <span class="experience">16</span>+ anos de experiência em encontrar soluções criativas.</p>
-            <p>Meu nome é Filipe Duarte.</p>
+            <h2>{t('hero.title')}</h2>
+            <Fragment set:html={t('hero.text')}></Fragment>
         </div>
     </div>
 </section>
@@ -32,18 +38,16 @@
 
 .hero-text {
     transition: opacity 300ms 500ms linear;
+    font-size: clamp(1.5rem, 3.8vw, 3.5rem);
+    font-weight: bold;
+    line-height: 1.25;
 }
 
 .hero-text h2 {
     margin: 32px 0 0;
-    font-size: 1rem;
-    color: var(--color-text);
-}
-
-#hero :is(h2, p) {
-    font-size: clamp(1.5rem, 3.8vw, 3.5rem);
     font-weight: bold;
     line-height: 1.25;
+    color: var(--color-text);
 }
 
 .hero-image {

@@ -1,11 +1,15 @@
 ---
 import Icon from "./Icon.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 const allSocials = await Astro.glob('../content/socials/*.md');
 allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="contact-social">
-    <h3>Quer saber mais sobre o meu trabalho ou falar comigo? Você pode me encontrar nas plataformas abaixo ou entrar em contato usando o formulário.</h3>
+    <h3>{t('contact.text')}</h3>
 
     <div class="social-links">
         <ul class="social">

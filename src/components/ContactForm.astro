@@ -1,15 +1,19 @@
 ---
 import Icon from "./Icon.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const allSocials = await Astro.glob('../content/socials/*.md');
 allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmatter.order) );
 ---
 
 <form class="contact-form">
-    <label for="name">Nome:</label>
+    <label for="name">{t('contact.name')}:</label>
     <input type="text" id="name" name="name" required>
-    <label for="email">E-mail:</label>
+    <label for="email">{t('contact.email')}:</label>
     <input type="email" id="email" name="email" required >
-    <label for="message">Mensagem:</label>
+    <label for="message">{t('contact.message')}:</label>
     <textarea id="message" name="message" required minlength="10"></textarea>
     <div class="submit-container">
         <ul class="social fake">
@@ -21,7 +25,7 @@ allSocials.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontm
         ))
         }
         </ul>
-        <button type="submit" class="button-primary">Entrar em contato</button>
+        <button type="submit" class="button-primary">{t('contact.submit')}</button>
         <div class="submit-message"></div>
     </div>
 </form>

@@ -10,4 +10,4 @@ order: 5
 
 **A solução:** Estudei bastante os posts no Instagram da agência para captar o que a empresa almejava em sua comunicação visual, assim como o site de referência que possui uma estética mais clean.
 
-Projeto feito na Kria Digital (kriadigital.com.br) e ainda em desenvolvimento.
+Projeto feito com a Kria Digital (kriadigital.com.br) e ainda em desenvolvimento.

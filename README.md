@@ -15,6 +15,9 @@
 │   ├── content/
 │   │   ├── socials/
 │   │   └── works/
+│   │       ├── en/
+│   │       └── pt/
+│   ├── i18n/
 │   ├── pages/
 │   │   └── index.astro
 │   ├── scripts/
