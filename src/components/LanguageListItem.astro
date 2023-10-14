@@ -8,7 +8,7 @@ const currLang = getLangFromUrl(Astro.url);
 <li class="menu-list__item languages">
     {
         Object.entries(languages).map(([lang, label]) => (
-            <a href={`../${lang}`} title={label} class={lang == currLang ? 'lang current' : 'lang'}>
+            <a href={`/${lang}`} title={label} class={lang == currLang ? 'lang current' : 'lang'}>
                 {lang}
             </a>
         ))
