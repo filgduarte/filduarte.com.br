@@ -10,10 +10,11 @@ export const content = {
         'hero.title'    : 'Designer e desenvolvedor',
         'hero.text'     : `<p>com <span class="experience">17</span> anos de experiência em encontrar soluções criativas.</p><p>Meu nome é Filipe Duarte.</p>`,
         'about.title'   : 'Sobre mim',
-        'about.text'    : `<p>Desde pequeno eu me interessava em fazer páginas na internet (lembra do Microsoft FrontPage?) e no Ensino Médio decidi fazer um <strong>Curso Técnico de Informática</strong>.</p>
-        <p>Quando fui para a faculdade, acabei escolhendo fazer <strong>Desenho Industrial </strong> e comecei a trabalhar em 2006 como designer gráfico. Devido ao meu histórico com desenvolvimento, eu também sempre acabava ficando responsável por fazer sites e web apps nas empresas em que trabalhei.</p>
-        <p>Graças a isso eu acumulei mais de <span class="experience">17</span> anos de experiência em <strong>HTML, CSS, Javascript, jQuery, PHP, Wordpress e MySQL</strong>. Atualmente estou cursando Análise e Desenvolvimento de Sistemas e estudando <strong>ReactJS</strong>, <strong>TypeScript</strong> e <strong>Laravel</strong> no meu tempo livre.</p>
-        <p>Se quiser saber mais sobre mim, clique no botão abaixo e baixe meu currículo.</p>`,
+        'about.text'    : `<p>Desde o início da minha carreira, o design e a programação caminham juntos.</p>
+        <p>Já no meu primeiro estágio em <strong>design gráfico</strong>, em 2006, eu precisei aprender <strong>PHP</strong> sozinho para desenvolver o site da empresa.</p>
+        <p>Dois anos depois, na Quatro Seniors Informática, a ligação entre as duas áreas se intensificou e eu avancei ainda mais nessa jornada, explorando <strong>UI design</strong>, me aprofundando em PHP, aprendendo <strong>SQL</strong> e descobrindo o <strong>JavaScript</strong>.</p>
+        <p>Em 2010 entrei para a agência uRock, onde tive a oportunidade de trabalhar em diversas áreas como <strong>brand design</strong>, <strong>motion design</strong>, <strong>design instrucional</strong>, além de criar sites em <strong>Wordpress</strong> e alguns web apps.A promoção à Coordenador de Artes e, logo depois, a entrada para a sociedade fortaleceram ainda mais a sinergia entre criatividade e código.</p>
+        <p>Atualmente estou de olho em novas oportunidades, buscando explorar mais a fundo novas formas de combinar design e desenvolvimento.</p>`,
         'about.button'  : 'Baixar CV',
         'about.link'    : '../filipe-duarte_cv_pt-br.pdf',
         'work.title'    : 'Meu trabalho',
@@ -30,10 +31,11 @@ export const content = {
         'hero.title'    : 'Designer and developer',
         'hero.text'     : `<p>with <span class="experience">17</span> years of experience finding creative solutions.</p><p>My name is Filipe Duarte.</p>`,
         'about.title'   : 'About me',
-        'about.text'    : `<p>From an early age I was interested in making pages on the internet (remember Microsoft FrontPage?) and in high school I decided to take a <strong>Technical Course in Information Technology</strong>.</p>
-        <p>When it was time to go to college, I ended up deciding to study <strong>Industrial Design</strong> and started working in 2006 as a graphic designer. Due to my development background, I also was always responsible for making websites and web apps in the companies I worked for.</p>
-        <p>Thanks to that I have accumulated more than <span class="experience">17</span> years of experience in <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong>, <strong>PHP</strong>, <strong>Wordpress</strong> and <strong>MySQL</strong>. Currently I’m pursuing a <strong>Systems Analysis and Development Degree</strong> besides studying <strong>ReactJS</strong>, <strong>TypeScript</strong> and <strong>Laravel</strong> on my free time.</p>
-        <p>If yout want to know more about me, click the button below and download my CV.</p>`,
+        'about.text'    : `<p>Since the beginning of my career, design and programming have gone hand in hand.</p>
+        <p>Even in my first internship in <strong>graphic design</strong> back in 2006, I had to learn <strong>PHP</strong> on my own to develop the company's website.</p>
+        <p>Two years later, at Quatro Seniors Informática, the connection between the two areas intensified, and I progressed even more in this journey by exploring <strong>UI design</strong>, going deeper into PHP, learning <strong>MySQL</strong>, and discovering <strong>JavaScript</strong>.</p>
+        <p>In 2010, I joined the uRock agency, where I had the opportunity to work in various areas such as <strong>brand design</strong>, <strong>motion design</strong>, <strong>instructional design</strong>, as well as creating websites in <strong>WordPress</strong> and some web apps. The promotion to Arts Coordinator and, shortly after, entry into partnership further strengthened the synergy between creativity and code.</p>
+        <p>Currently, I am keeping an eye out for new opportunities, seeking to explore more deeply new ways of combining design and development.</p>`,
         'about.button'  : 'Download CV',
         'about.link'    : '../filipe-duarte_cv_en-us.pdf',
         'work.title'    : 'My work',

@@ -1,5 +1,5 @@
 ---
-link: #
+link: http://genteag.com/
 thumbnail: /images/works/work-gente-soon.webp
 tags: [html, css, javascript, php, wordpress]
 order: 5
@@ -10,4 +10,4 @@ order: 5
 
 **The solution:** I studied the agency's Instagram posts a lot to capture what the company wanted in its visual communication, as well as the reference website, which has a cleaner aesthetic.
 
-Project done with Kria Digital (kriadigital.com.br) and still under development.
+Project done with Kria Digital (kriadigital.com.br).
