@@ -13,7 +13,7 @@ export const content = {
         'about.text'    : `<p>Desde o início da minha carreira, o design e a programação caminham juntos.</p>
         <p>Já no meu primeiro estágio em <strong>design gráfico</strong>, em 2006, eu precisei aprender <strong>PHP</strong> sozinho para desenvolver o site da empresa.</p>
         <p>Dois anos depois, na Quatro Seniors Informática, a ligação entre as duas áreas se intensificou e eu avancei ainda mais nessa jornada, explorando <strong>UI design</strong>, me aprofundando em PHP, aprendendo <strong>SQL</strong> e descobrindo o <strong>JavaScript</strong>.</p>
-        <p>Em 2010 entrei para a agência uRock, onde tive a oportunidade de trabalhar em diversas áreas como <strong>brand design</strong>, <strong>motion design</strong>, <strong>design instrucional</strong>, além de criar sites em <strong>Wordpress</strong> e alguns web apps.A promoção à Coordenador de Artes e, logo depois, a entrada para a sociedade fortaleceram ainda mais a sinergia entre criatividade e código.</p>
+        <p>Em 2010 entrei para a agência uRock, onde tive a oportunidade de trabalhar em diversas áreas como <strong>brand design</strong>, <strong>motion design</strong>, <strong>design instrucional</strong>, além de criar sites em <strong>Wordpress</strong> e alguns web apps. A promoção à Coordenador de Artes e, logo depois, a entrada para a sociedade fortaleceram ainda mais a sinergia entre criatividade e código.</p>
         <p>Atualmente estou de olho em novas oportunidades, buscando explorar mais a fundo novas formas de combinar design e desenvolvimento.</p>`,
         'about.button'  : 'Baixar CV',
         'about.link'    : '../filipe-duarte_cv_pt-br.pdf',
