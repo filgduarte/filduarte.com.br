@@ -25,6 +25,7 @@ export const content = {
         'contact.email' : 'E-mail',
         'contact.message': 'Mensagem',
         'contact.submit': 'Entrar em contato',
+        'footer.copyright': 'Design e desenvolvimento por Filipe Duarte',
         'footer.source' : 'Ver código fonte no GitHub',
     },
     en: {
@@ -46,6 +47,7 @@ export const content = {
         'contact.email' : 'E-mail',
         'contact.message': 'Message',
         'contact.submit': 'Get in touch',
+        'footer.copyright': 'Design and development by Filipe Duarte',
         'footer.source' : 'See source code on GitHub',
     },
 };
