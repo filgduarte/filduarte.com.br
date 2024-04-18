@@ -2,7 +2,7 @@
 link: https://github.com/filgduarte/kanban-tracker
 thumbnail: /images/works/work-kanban-tracker.webp
 tags: [html, css, typescript, react-js]
-order: 4
+order: 6
 ---
 #### Kanban Tracker
 ##### Webapp para gerenciamento de projetos.
