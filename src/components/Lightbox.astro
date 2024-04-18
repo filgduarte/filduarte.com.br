@@ -1,0 +1,50 @@
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <div class="content">
+        <img src="" alt="Full image">
+    </div>
+</div>
+
+<style>
+    #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        z-index: 999;
+        pointer-events: none;
+        transition: opacity 150ms linear;
+    }
+
+    #lightbox.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    #lightbox .close {
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    #lightbox .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #lightbox .content img {
+        max-width: min(100%, 1080px);
+        max-height: min(100%, 1080px);
+        object-fit: contain;
+    }
+</style>

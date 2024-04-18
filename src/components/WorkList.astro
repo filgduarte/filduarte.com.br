@@ -14,7 +14,7 @@ allWorks.sort( (a, b) => Date.parse(a.frontmatter.order) - Date.parse(b.frontmat
 allWorks.map( (work, index) => (
     <div class="work-item" style={`--i: ${index}; --toggler: 1;`}>
         <div class="work-item__content">
-            <a href={work.frontmatter.link} target="_blank" class="work-item__description">
+            <a href={work.frontmatter.link} target="_blank" class={`work-item__description ${work.frontmatter.lightbox ? 'lightbox-link' : ''}`}>
                 <span set:html={work.compiledContent()} />
                 <ul>
                     {

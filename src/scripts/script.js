@@ -152,6 +152,24 @@ window.addEventListener('load', function () {
             workItem.style.setProperty('--toggler', 0);
         });
     })
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.querySelector('#lightbox .content img');
+    const lightboxLinks = document.querySelectorAll('.lightbox-link');
+
+    lightboxLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            lightboxImage.src = this.getAttribute('href');
+            lightbox.classList.add('active');
+        });
+    });
+
+    lightbox.addEventListener('click', function() {
+        lightboxImage.src = '';
+        lightbox.classList.remove('active');
+    });
 });
 
 function scrollTrigger(trigger, triggerReference, viewportReference) {
