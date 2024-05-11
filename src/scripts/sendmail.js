@@ -5,7 +5,7 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(form);
 
-    fetch("https://www.filduarte.com.br/sendmail.php", {
+    fetch("./sendmail.php", {
         method: "POST",
         body: formData
     })
