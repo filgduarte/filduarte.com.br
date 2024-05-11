@@ -3,7 +3,7 @@ link: /images/works/work-beauty-salon-3d_large.webp
 thumbnail: /images/works/work-beauty-salon-3d.webp
 lightbox: true
 tags: [3d, blender]
-order: 8
+order: 4
 ---
 #### 3D Beauty Salon
 ##### 3D Scene Modeling

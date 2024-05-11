@@ -3,7 +3,7 @@ link: /images/works/work-raizen-ufcp_large.webp
 thumbnail: /images/works/work-raizen-ufcp.webp
 lightbox: true
 tags: [graphic design]
-order: 7
+order: 3
 ---
 #### Raízen
 ##### Layout of an informative brochure.
