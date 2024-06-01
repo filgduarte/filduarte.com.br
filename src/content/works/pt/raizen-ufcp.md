@@ -7,7 +7,7 @@ order: 3
 ---
 #### Raízen
 ##### Diagramação de folder informativo.
-**The challenge:** Criar um folder bilingue de 4 páginas com informações técnicas sobre uma usina fotovoltáica.
+**O desafio:** Criar um folder bilingue de 4 páginas com informações técnicas sobre uma usina fotovoltáica.
 
 **A solução:** Criar um layout em duas colunas (uma para cada idioma) com infográficos para ilustrar as informações.
 
