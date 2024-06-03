@@ -3,15 +3,40 @@ const resultContainer = document.querySelector('.submit-message');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const formData = new FormData(form);
     const isEnglish = window.location.href.includes('/en');
+    const formData = new FormData(form);
+    const formObject = {};
+
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
 
     fetch("./sendmail.php", {
         method: "POST",
-        body: formData
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formObject)
     })
     .then(response => response.json())
     .then(data => {
+        resultContainer.innerText = '';
+        if (data.invalidRequest) {
+            resultContainer.innerText = isEnglish
+            ? "Invalid request method."
+            : "Método de requisição inválido.";
+
+            return false;
+        }
+
+        if (data.invalidJson) {
+            resultContainer.innerText = isEnglish
+            ? "Invalid JSON format."
+            : "Formato de JSON inválido.";
+
+            return false;
+        }
+
         if (data.success)
         {
             resultContainer.innerText = isEnglish
@@ -39,7 +64,7 @@ form.addEventListener('submit', function(event) {
         {
             resultContainer.innerText = isEnglish
                                         ? "There was an error sending the message, please try again."
-                                        : "Houve um erro enviando a mensagem, tente novamente.";
+                                        : "Não foi possível enviar a sua mensagem, tente novamente.";
         }
     })
     .catch(error => {

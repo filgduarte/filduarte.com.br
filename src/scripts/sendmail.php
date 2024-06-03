@@ -1,8 +1,18 @@
 <?php
 
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST")
 {
-    die('Nothing to see here.');
+    echo json_encode(['invalidRequest' => true]);
+    exit;
+}
+
+$input = json_decode(file_get_contents('php://input'), true);
+
+if (json_last_error() !== JSON_ERROR_NONE) {
+    echo json_encode(['invalidJson' => true]);
+    exit;
 }
 
 function sanitize_string($data)
@@ -14,9 +24,9 @@ function sanitize_string($data)
 }
 
 $form_fields = array(
-    'name'      => sanitize_string($_POST["name"]),
-    'email'     => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL),
-    'message'   => sanitize_string($_POST["message"]),
+    'name'      => sanitize_string($input["name"]),
+    'email'     => filter_var($input["email"], FILTER_SANITIZE_EMAIL),
+    'message'   => sanitize_string($input["message"]),
 );
 $valid_email = filter_var($form_fields['email'], FILTER_VALIDATE_EMAIL);
 $errors = array();
@@ -43,7 +53,6 @@ if (strlen($message) > 1000)
 // Return errors if any
 if ( ! empty($errors) )
 {
-    header("Content-Type: application/json");
     echo json_encode($errors);
     exit;
 }
